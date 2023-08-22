@@ -106,10 +106,18 @@ To enable those extensions head back to your IIS window and head back to the dro
 <br />
 
 <p>
-<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/d9297635-01f7-4ea1-9ea9-c2e277a36040"/>
+<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/75890593-d104-455e-8a97-b8993dccdbcf"/>
 </p>
 <p>
-Test that the installation of IIS was done properly by opening up a web browser and typing in 127.0.0.1. It should load up a Windows page like the one shown above. If it does not uninstall the IIS and do step one over again. 
+Now before we continue to setup osTicket in the browser we must first finish configuring the files for the program to run smoothly on the server. First open up a File Explorer window for your (C:) Drive and navigate to inetpub, wwwroot,osTicket,include, and search for “ost-sampleconfig.php” which we will be renaming to “ost-config.php”. Right click on that newly named file, click on Properties, navigate to security. From here we will Disable inheritance/Remove All followed by making New Permissions for Everyone/All.
+</p>
+<br />
+
+<p>
+<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/b42beac1-143e-48ce-938e-c8ff0386f620"/>
+</p>
+<p>
+Continue setting up osTicket on your web browser by clicking Continue. Configure the name, default emails, and such to your liking, but ensure that the information inputted for MySQL matches the database we’re about to make once you’ve downloaded HeidiSQL. Install the application by following the prompts, open the program, and Create a new session with the credentials “User: root” and “Password: Password1”. Click connect to the session, right click under “Unnamed”, and create a new database called “osTicket”.
 </p>
 <br />
 
@@ -117,22 +125,14 @@ Test that the installation of IIS was done properly by opening up a web browser 
 <img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/d9297635-01f7-4ea1-9ea9-c2e277a36040"/>
 </p>
 <p>
-Test that the installation of IIS was done properly by opening up a web browser and typing in 127.0.0.1. It should load up a Windows page like the one shown above. If it does not uninstall the IIS and do step one over again. 
+Once you’ve successfully filled in the Settings for osTicket in your browser with the MySQL Database: osTicket, MySQL Username: root, and MySQL Password: Password1 click “Install Now!”. If there were no errors there should be a fully functioning ticketing system setup on your computer’s localhost web server. Which would give you access to a help desk login page: http://localhost/osTicket/scp/login.php and an End User page: http://localhost/osTicket/. 
 </p>
 <br />
 
 <p>
-<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/d9297635-01f7-4ea1-9ea9-c2e277a36040"/>
+<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/0161b8e5-1a79-450a-9048-d1384c9639be"/>
 </p>
 <p>
-Test that the installation of IIS was done properly by opening up a web browser and typing in 127.0.0.1. It should load up a Windows page like the one shown above. If it does not uninstall the IIS and do step one over again. 
-</p>
-<br />
-
-<p>
-<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/d9297635-01f7-4ea1-9ea9-c2e277a36040"/>
-</p>
-<p>
-Test that the installation of IIS was done properly by opening up a web browser and typing in 127.0.0.1. It should load up a Windows page like the one shown above. If it does not uninstall the IIS and do step one over again. 
+Last but not least there is clean up of files before we begin configuring Roles, Departments, and Teams within osTicket. Navigate to your (C:) Drive\inetpub\wwwroot\osTicket\setup and delete this file. Next change the Permissions to “Read” only for (C:) Drive\inetpub\wwwroot\osTicket\include\ost-config.php. 
 </p>
 <br />
