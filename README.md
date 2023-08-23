@@ -7,7 +7,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines/Computer)
 - Remote Desktop
 - Internet Information Services (IIS)
 
@@ -17,11 +17,12 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Enabled Internet Information Service (IIS)
-- Installed PHP Manager for Web Platform acesss to IIS
-- Installed MySQL
-- Installed C++ Redistributable 
-- Configured permisions and installed osTicket
+- Enable Internet Information Service (IIS)
+- Install PHP Manager for Web Platform acesss to IIS
+- Install MySQL
+- Install C++ Redistributable 
+- Configure permisions and install osTicket
+- Install HeidiSQL as the database for osTicket
 
 <h2>Installation Steps</h2>
 
@@ -98,7 +99,7 @@ Reload the server by opening up IIS as an administrator again and clicking resta
 <br />
 
 <p>
-<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/d9297635-01f7-4ea1-9ea9-c2e277a36040"/>
+<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/9f32ef4f-e9f6-4078-8fb4-24d07ff41395"/>
 </p>
 <p>
 To enable those extensions head back to your IIS window and head back to the drop down for Site, Default, and double click on osTicket. From there double click on PHP Manger and open up “Enable or disable an extension”. Go ahead and enable php_imap.dll, php_intl.dll, and php_opcache.dll. Finish it off by refreshing the osTicket site in your browser and observe the changes. 
@@ -109,7 +110,7 @@ To enable those extensions head back to your IIS window and head back to the dro
 <img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/75890593-d104-455e-8a97-b8993dccdbcf"/>
 </p>
 <p>
-Now before we continue to setup osTicket in the browser we must first finish configuring the files for the program to run smoothly on the server. First open up a File Explorer window for your (C:) Drive and navigate to inetpub, wwwroot,osTicket,include, and search for “ost-sampleconfig.php” which we will be renaming to “ost-config.php”. Right click on that newly named file, click on Properties, navigate to security. From here we will Disable inheritance/Remove All followed by making New Permissions for Everyone/All.
+Now before we continue to setup osTicket in the browser we must first finish configuring the files for the program to run smoothly on the server. First open up a File Explorer window for your (C:) Drive and navigate to inetpub, wwwroot,osTicket,include, and search for “ost-sampleconfig.php” which we will be renaming to “ost-config.php”. Right click on that newly named file, click on Properties, navigate to security. From here we will Disable inheritance/Remove All followed by making a New Permission for Everyone/All.
 </p>
 <br />
 
@@ -122,7 +123,7 @@ Continue setting up osTicket on your web browser by clicking Continue. Configure
 <br />
 
 <p>
-<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/d9297635-01f7-4ea1-9ea9-c2e277a36040"/>
+<img src="https://github.com/elTuTico/osticket-prereqs/assets/137955237/60c34536-84bd-4a88-91ff-c1d5c82ab676"/>
 </p>
 <p>
 Once you’ve successfully filled in the Settings for osTicket in your browser with the MySQL Database: osTicket, MySQL Username: root, and MySQL Password: Password1 click “Install Now!”. If there were no errors there should be a fully functioning ticketing system setup on your computer’s localhost web server. Which would give you access to a help desk login page: http://localhost/osTicket/scp/login.php and an End User page: http://localhost/osTicket/. 
